@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+<h1>What Does Your Name Says About Your Personality?</h1>
+<div class="centerdiv">
+    <div class="details">
+        <label > Enter Your Name</label> <br>
+        <input type="text" name="" id="nameid">
+    </div>
+    <div class="imgdiv">
+        <img src="random.jpg" width="200" height="200" class="imgchange">
+    </div>
+    <button>Click Me</button>
+</div> 
+</section>
+
+<script src="jQuery.js"></script>
+<script>
+    $(document).ready(function(){
+        $('button').click(function(){
+        const name= $('#nameid').val();
+        alert(name);
+        $('.imgchange').attr('src',`https://joeschmoe.io/api/v1/${name}`)
+        })
+    })
+</script>
+</body>
+</html>
